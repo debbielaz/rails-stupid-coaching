@@ -1,16 +1,15 @@
 class CoachingController < ApplicationController
   def answer
-    @answered = params[:query]
+    @query = params[:query]
+    @answer = coach_answer(@query)
   end
 
   def ask
+
   end
+
+  def coach_answer(query)
+    return p 'hello'
 end
 
-
-class RestaurantsController
-  def index
-    @category = params[:food_type]
-    @restaurants = RESTAURANTS.select {|r| r[:category] == @category }
-  end
 end
